@@ -1,24 +1,33 @@
 pkgbase = bluetuith
-	pkgdesc = TUI-based bluetooth manager
+	pkgdesc = A TUI based bluetooth manager
 	pkgver = 0.2.7
-	pkgrel = 1
-	epoch = 1
-	url = https://github.com/bluetuith-org/bluetuith
+	pkgrel = 3
+	url = https://github.com/darkhz/bluetuith
 	arch = x86_64
 	arch = i686
-	arch = pentium4
-	arch = armv7h
+	arch = arm
 	arch = aarch64
+	arch = armv6h
+	arch = armv7h
 	license = MIT
-	makedepends = go>=1.25
-	makedepends = git
 	depends = bluez
+	depends = bluez-obex
 	depends = dbus
-	optdepends = bluez-obex: send and receive files via OBEX
-	optdepends = networkmanager: PANU network tethering
-	optdepends = modemmanager: DUN network tethering
-	optdepends = pulse-native-provider: device audio profile management
-	source = bluetuith::git+https://github.com/bluetuith-org/bluetuith#tag=v0.2.7
-	b2sums = dfe48a8ef8ee9b78b1b6a83082c9e7d0a1c7064dc492cdf8f295a5dfa6214a9f163f0d2a7c42fb8a2dd43ceaa329255d151ddc932506eac3ab88db1c1b90de6a
+	optdepends = networkmanager: For PANU networking
+	optdepends = modemmanager: For DUN networking
+	optdepends = pulseaudio: For switching device audio profiles
+	provides = bluetuith
+	conflicts = bluetuith
+	source_x86_64 = https://github.com/darkhz/bluetuith/releases/download/v0.2.7/bluetuith_0.2.7_Linux_x86_64.tar.gz
+	sha256sums_x86_64 = 145888f0e3959d29832c7395403c2327e0f03b9591e4cdd3f712741cf0f934e9
+	sha256sums_i686 = 4d5577e3fa67f31951cb25137ce87b8ec3cb7ff17b78bbba9908f30126a046cb
+	source_arm = https://github.com/darkhz/bluetuith/releases/download/v0.2.7/bluetuith_0.2.7_Linux_armv5.tar.gz
+	sha256sums_arm = 2c52000affdbdae7cdefe66edb8292429aec2bfb2f14d6f306d6a12d9089376e
+	source_aarch64 = https://github.com/darkhz/bluetuith/releases/download/v0.2.7/bluetuith_0.2.7_Linux_arm64.tar.gz
+	sha256sums_aarch64 = 81ec8bdbdf18ddabff0ce5fb11f478dfa8dccbd9efc8e14583d4cbb8ef0f8d84
+	source_armv6h = https://github.com/darkhz/bluetuith/releases/download/v0.2.7/bluetuith_0.2.7_Linux_armv6.tar.gz
+	sha256sums_armv6h = 186d314023715a2c94b0a96ba1bc6829b93864de96a75f547fd74efecda9cce9
+	source_armv7h = https://github.com/darkhz/bluetuith/releases/download/v0.2.7/bluetuith_0.2.7_Linux_armv7.tar.gz
+	sha256sums_armv7h = bc2a86074d76bda44736d9ff9fbb91bf07857b962a5843a028a69c5bb7cc6e80
 
 pkgname = bluetuith
